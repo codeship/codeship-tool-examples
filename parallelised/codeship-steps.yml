@@ -1,0 +1,12 @@
+- type: parallel
+  steps:
+  - service: demo
+    command: sleep 4
+  - service: demo
+    command: sleep 2
+  - type: serial
+    steps:
+    - service: demo
+      command: sleep 3
+    - service: demo
+      command: echo "In between"

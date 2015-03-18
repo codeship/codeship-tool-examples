@@ -1,0 +1,11 @@
+- type: matrix
+  services:
+    - demo1
+    - demo2
+  steps:
+    - command: sleep 4
+    - command: sleep 2
+    - type: serial
+      steps:
+      - command: sleep 3
+      - command: echo $OUTPUT

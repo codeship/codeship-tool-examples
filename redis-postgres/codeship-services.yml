@@ -1,0 +1,13 @@
+demo:
+  build:
+    image: ares-redis
+    dockerfile_path: Dockerfile
+  links:
+    - redis
+    - postgres
+redis:
+  image: redis:2.6.17
+  #image: redis:2.8.19
+postgres:
+   image: postgres:9.3.6
+   #image: postgres:9.4.1

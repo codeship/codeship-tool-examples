@@ -1,0 +1,8 @@
+demo:
+  build:
+    image: ares-redis
+    dockerfile_path: Dockerfile
+  links:
+    - redis
+redis:
+  image: redis:2.8.19

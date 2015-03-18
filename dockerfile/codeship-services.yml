@@ -1,0 +1,4 @@
+demo:
+  build:
+    image: ares-redis
+    dockerfile_path: Dockerfile

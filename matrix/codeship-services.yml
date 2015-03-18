@@ -1,0 +1,8 @@
+demo1:
+  image: busybox
+  environment:
+    OUTPUT: test1
+demo2:
+  image: busybox
+  environment:
+    OUTPUT: test2

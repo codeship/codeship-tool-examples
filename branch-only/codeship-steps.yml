@@ -1,0 +1,3 @@
+- service: demo
+  tag: master
+  command: echo "SHOULD ONLY RUN ON MASTER"

@@ -1,0 +1,6 @@
+- type: matrix
+  services:
+    - demo1
+    - demo2
+  steps:
+    - command: env

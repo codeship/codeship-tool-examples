@@ -1,0 +1,14 @@
+write:
+  build:
+    image: demowrite
+    dockerfile_path: Dockerfile
+  volumes_from:
+    - data
+read:
+  image: busybox
+  volumes_from:
+    - data
+data:
+  image: busybox
+  volumes:
+    - /artefacts

@@ -1,0 +1,2 @@
+- service: demo
+  command: bundle exec ruby check.rb
