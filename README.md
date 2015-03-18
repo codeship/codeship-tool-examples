@@ -6,3 +6,8 @@ Examples for use with the Codeship tool.
 
 * peter-edge/smartystreets_ruby (https://github.com/peter-edge/smartystreets_ruby)
 * peter-edge/go-scm (https://github.com/peter-edge/go-scm)
+
+#### Questions? Comments?
+
+flo@codeship.com  
+peter@codeship.com
