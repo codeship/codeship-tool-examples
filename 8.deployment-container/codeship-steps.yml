@@ -1,2 +1,4 @@
 - service: deploy
   command: cat /app/date
+- service: deploy
+  command: ls /app
