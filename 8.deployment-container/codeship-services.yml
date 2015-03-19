@@ -1,9 +1,9 @@
-compile:
+compiledemo:
   image: ubuntu
 deploy:
   build:
-    image: busybox
+    image: busybox-deployment-container
     dockerfile_path: Dockerfile
     configure:
-      service: compile
+      service: compiledemo
       command: bash write_artefact

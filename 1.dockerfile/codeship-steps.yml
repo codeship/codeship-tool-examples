@@ -1,0 +1,6 @@
+- service: demodockerfile
+  command: ruby --version
+- service: demohub
+  command: ruby --version
+- service: demodockerfile
+  command: ls /app

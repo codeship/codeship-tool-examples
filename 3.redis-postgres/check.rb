@@ -9,8 +9,7 @@ end
 
 puts "Redis"
 redis = Redis.new(host: "redis")
-redis.set "foo", "bar"
-exit_if_not redis.get("foo"), "bar"
+puts "REDIS VERSION: #{redis.info["redis_version"]}"
 
 sleep 2
 postgres_username = "postgres"

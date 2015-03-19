@@ -8,4 +8,4 @@
     - type: serial
       steps:
       - command: sleep 3
-      - command: echo $OUTPUT
+      - command: env

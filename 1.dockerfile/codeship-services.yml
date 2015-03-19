@@ -1,0 +1,6 @@
+demodockerfile:
+  build:
+    image: demodockerfile
+    dockerfile_path: Dockerfile
+demohub:
+  image: ruby:2.2.0
