@@ -6,4 +6,4 @@ deploy:
     dockerfile_path: Dockerfile
     configure:
       service: compiledemo
-      command: bash write_artefact
+      command: bash write_artifact.sh

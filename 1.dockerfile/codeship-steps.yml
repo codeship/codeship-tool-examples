@@ -2,5 +2,5 @@
   command: ruby --version
 - service: demohub
   command: ruby --version
-- service: demodockerfile
+- service: demodockerfiledockercompose
   command: ls /app

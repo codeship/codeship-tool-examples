@@ -1,4 +1,4 @@
 - service: write
-  command: bash write_artefact
+  command: bash write_artifact.sh
 - service: read
   command: cat /artefacts/foo

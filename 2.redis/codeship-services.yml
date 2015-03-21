@@ -1,6 +1,6 @@
 demo:
   build:
-    image: ares-redis
+    image: myapp
     dockerfile_path: Dockerfile
   links:
     - redis

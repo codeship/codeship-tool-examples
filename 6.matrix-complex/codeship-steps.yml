@@ -3,9 +3,11 @@
     - demo1
     - demo2
   steps:
-    - command: sleep 4
-    - command: sleep 2
-    - type: serial
+    - type: parallel
       steps:
-      - command: sleep 3
-      - command: env
+      - command: sleep 4
+      - command: sleep 2
+      - type: serial
+        steps:
+        - command: sleep 3
+        - command: env
