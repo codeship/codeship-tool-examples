@@ -1,0 +1,1 @@
+codeship steps --key-type=rsa --key-path=../keys/rsa/private.pem
