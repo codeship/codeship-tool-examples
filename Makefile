@@ -5,5 +5,5 @@ all: test
 test:
 	@ for dir in $(shell find . -type d -d 1 | grep -v .git); do \
 		echo $$dir; \
-		codeship steps --dir=$$dir; \
+		codeship steps --dir=$$dir --private-key-path=keys/rsa/private.pem; \
 	done

@@ -1,0 +1,3 @@
+busybox:
+  image: busybox
+  encrypted_env_file: env.yml.enc
