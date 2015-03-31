@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+
+RUN apt-get update -qq
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y socat
+
+CMD socat TCP4-LISTEN:6379,fork TCP4:redis:6379

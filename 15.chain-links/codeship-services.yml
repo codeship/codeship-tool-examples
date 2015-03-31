@@ -1,0 +1,14 @@
+demo:
+  build:
+    image: myapp
+    dockerfile_path: Dockerfile
+  links:
+    - socat
+redis:
+  image: redis:2.8.19
+socat:
+  build:
+    image: socat-redis
+    dockerfile_path: Dockerfile.socat
+  links:
+    - redis
