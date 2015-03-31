@@ -1,4 +1,2 @@
 - service: demo
-  command: cat check.rb
-- service: demo
   command: bundle exec ruby check.rb
