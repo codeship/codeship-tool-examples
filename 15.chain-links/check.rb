@@ -1,6 +1,6 @@
 require "redis"
 
-def exit_if_not expected, current
+def exit_if_not(expected, current)
   puts "Expected: #{expected}"
   puts "Current: #{current}"
   exit(1) if expected != current
