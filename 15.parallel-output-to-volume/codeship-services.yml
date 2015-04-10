@@ -1,0 +1,8 @@
+data:
+  image: busybox
+  volumes:
+    - /data
+app:
+  build: .
+  volumes_from:
+    - data
