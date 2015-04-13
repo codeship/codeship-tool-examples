@@ -1,44 +1,25 @@
 - type: parallel
+  service: app
   steps:
-    - service: app
-      command: bash /app/compute.sh /app/files/1 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/2 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/3 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/4 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/5 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/6 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/7 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/8 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/9 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/10 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/11 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/12 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/13 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/14 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/15 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/16 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/17 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/18 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/19 /data
-    - service: app
-      command: bash /app/compute.sh /app/files/20 /data
+    - command: bash /app/compute.sh /app/files/1 /data
+    - command: bash /app/compute.sh /app/files/2 /data
+    - command: bash /app/compute.sh /app/files/3 /data
+    - command: bash /app/compute.sh /app/files/4 /data
+    - command: bash /app/compute.sh /app/files/5 /data
+    - command: bash /app/compute.sh /app/files/6 /data
+    - command: bash /app/compute.sh /app/files/7 /data
+    - command: bash /app/compute.sh /app/files/8 /data
+    - command: bash /app/compute.sh /app/files/9 /data
+    - command: bash /app/compute.sh /app/files/10 /data
+    - command: bash /app/compute.sh /app/files/11 /data
+    - command: bash /app/compute.sh /app/files/12 /data
+    - command: bash /app/compute.sh /app/files/13 /data
+    - command: bash /app/compute.sh /app/files/14 /data
+    - command: bash /app/compute.sh /app/files/15 /data
+    - command: bash /app/compute.sh /app/files/16 /data
+    - command: bash /app/compute.sh /app/files/17 /data
+    - command: bash /app/compute.sh /app/files/18 /data
+    - command: bash /app/compute.sh /app/files/19 /data
+    - command: bash /app/compute.sh /app/files/20 /data
 - service: app
   command: bash /app/print.sh /data
