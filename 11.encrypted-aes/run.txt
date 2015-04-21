@@ -1,1 +1,1 @@
-codeship steps --key-path=../keys/aes/key.key
+codeship steps --key-path=keys.key
