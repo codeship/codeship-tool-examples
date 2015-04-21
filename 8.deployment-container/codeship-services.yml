@@ -6,4 +6,4 @@ deploy:
     dockerfile_path: Dockerfile
     configure:
       service: compiledemo
-      command: pwd
+      command: bash write_artifact.sh
