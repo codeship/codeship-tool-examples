@@ -2,7 +2,7 @@ compiledemo:
   image: ubuntu
 deploy:
   build:
-    image: busybox-deployment-container
+    image: busybox_deployment_container
     dockerfile_path: Dockerfile
     configure:
       service: compiledemo
