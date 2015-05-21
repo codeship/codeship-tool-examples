@@ -9,5 +9,4 @@ Examples for use with the Codeship tool.
 
 #### Questions? Comments?
 
-flo@codeship.com  
 peter@codeship.com
