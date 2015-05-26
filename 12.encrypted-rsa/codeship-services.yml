@@ -1,3 +1,0 @@
-busybox:
-  image: busybox
-  encrypted_env_file: env.env.enc
