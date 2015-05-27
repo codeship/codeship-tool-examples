@@ -1,1 +1,1 @@
-codeship steps --key-path=keys.key
+jet steps --key-path=key.key
