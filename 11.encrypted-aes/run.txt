@@ -1,1 +1,1 @@
-jet steps --key-path=key.key
+jet steps
