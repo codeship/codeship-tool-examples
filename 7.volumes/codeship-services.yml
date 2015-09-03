@@ -11,4 +11,4 @@ read:
 data:
   image: busybox
   volumes:
-    - /artifacts
+    - ./tmp:/artifacts
