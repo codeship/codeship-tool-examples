@@ -1,0 +1,9 @@
+demo:
+  build:
+    image: localhost:5000/myapp
+    dockerfile_path: Dockerfile
+  cached: true
+registry:
+  image: registry
+  ports:
+    - "5000:5000"
