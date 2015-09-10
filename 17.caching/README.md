@@ -13,4 +13,3 @@ $ ./after.sh
 ```
 
 You can switch off the `cached` flag in the codeship-services file to see what difference it makes.
-
