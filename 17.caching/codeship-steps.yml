@@ -1,0 +1,2 @@
+- service: demo
+  command: ls -l
