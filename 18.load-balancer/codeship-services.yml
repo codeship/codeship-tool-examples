@@ -1,0 +1,28 @@
+app1:
+  build:
+    image: go-hello
+    dockerfile_path: Dockerfile.app
+  command: ./app
+
+app2:
+  build:
+    image: go-hello
+    dockerfile_path: Dockerfile.app
+  command: ./app
+
+lb:
+  build:
+    image: nginx-lb
+    dockerfile_path: Dockerfile.lb
+  links:
+    - app1
+    - app2
+  ports:
+    - "8080:80"
+
+test:
+  build:
+    image: lb-ci
+    dockerfile_path: Dockerfile.ci
+  links:
+    - lb
