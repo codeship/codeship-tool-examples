@@ -1,4 +1,4 @@
+- service: compiledemo
+  command: "./write_artifact.sh"
 - service: deploy
-  command: cat /app/date
-- service: deploy
-  command: ls /app
+  command: cat /data/date
