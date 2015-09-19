@@ -3,8 +3,8 @@
 all: test
 
 test:
-	@ for dir in $(shell find . -depth -type d | grep -v .git | grep -v ^11 | grep -v ^12 | grep ^./$ ); do \
-		echo $$dir; \
+	@ for dir in $(shell ls -d */ | sort -n ); do \
+		echo "RUNNING TESTS FOR $$dir"; \
 	 	if [ -f $$dir/before.sh ]; then \
 	 	  $$dir/before.sh; \
 	 	fi; \

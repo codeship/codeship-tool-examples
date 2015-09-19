@@ -1,0 +1,3 @@
+examples:
+  build: .
+  add_docker: true
