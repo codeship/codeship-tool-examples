@@ -7,7 +7,7 @@ for dir in $(ls -d */ | sort -n ); do
     $dir/before.sh
   fi
 
-  command="jet steps --push=true --dir=$dir --log-driver=logrus"
+  command="jet steps --push=true --dir=$dir"
   echo "RUNNING: $command"
   if $command
   then
