@@ -1,2 +1,2 @@
 - service: examples
-  command: make test
+  command: ./run_tests.sh
