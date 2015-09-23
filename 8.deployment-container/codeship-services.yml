@@ -8,3 +8,6 @@ deploy:
   dockerfile: Dockerfile
   volumes_from:
     - compiledemo
+app:
+  build: ./
+  dockerfile: Dockerfile.app

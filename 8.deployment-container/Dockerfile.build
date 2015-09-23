@@ -1,4 +1,3 @@
 FROM busybox
-VOLUME /data
 
 ADD write_artifact.sh .
