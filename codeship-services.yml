@@ -1,0 +1,3 @@
+adddocker:
+  image: jpetazzo/dind
+  add_docker: true
