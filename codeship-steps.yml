@@ -40,4 +40,4 @@
     name: 14.add_docker
     steps:
     - service: adddocker
-      command: docker run busybox echo hello
+      command: test_docker.sh

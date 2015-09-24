@@ -1,5 +1,8 @@
 adddocker:
-  image: jpetazzo/dind
+  build:
+    image: add_docker_test
+    dockerfile_path: Dockerfile
+    path: ./14.add_docker
   add_docker: true
 demodockerfile:
   build:
