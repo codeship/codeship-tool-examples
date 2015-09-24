@@ -1,2 +1,2 @@
 - service: adddocker
-  command: docker run busybox echo hello
+  command: ./test_docker.sh
