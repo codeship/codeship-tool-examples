@@ -1,3 +1,33 @@
 adddocker:
   image: jpetazzo/dind
   add_docker: true
+demodockerfile:
+  build:
+    image: demodockerfile
+    dockerfile_path: Dockerfile
+    path: ./1.dockerfile/
+demodockerfiledockercompose:
+  build: ./1.dockerfile
+demohub:
+  image: ruby:2.2.0
+demobusy:
+  image: busybox
+demo:
+  build:
+    image: myapp
+    dockerfile_path: Dockerfile
+    path: ./2.redis/
+  links:
+    - redis
+redis:
+  image: redis:2.8.19
+demo2:
+  build:
+    image: myapp2
+    dockerfile_path: Dockerfile
+    path: ./3.redis-postgres/
+  links:
+    - redis
+    - postgres
+postgres:
+   image: postgres:9.3.6
