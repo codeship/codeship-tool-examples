@@ -1,0 +1,4 @@
+- type: parallel
+  steps:
+  - service: adddocker
+    command: docker run busybox echo hello
