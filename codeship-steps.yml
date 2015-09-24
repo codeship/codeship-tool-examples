@@ -1,4 +1,4 @@
-- type: parallel
+- type: serial
   steps:
   - type: serial
     name: 1.dockerfile
