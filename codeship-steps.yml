@@ -1,4 +1,43 @@
 - type: parallel
   steps:
-  - service: adddocker
-    command: docker run busybox echo hello
+  - type: serial
+    name: 1.dockerfile
+    steps:
+    - service: demodockerfile
+      command: ruby --version
+    - service: demohub
+      command: ruby --version
+    - service: demodockerfiledockercompose
+      command: ls /app
+  - type: serial
+    name: 2.redis
+    steps:
+    - service: demo
+      command: bundle exec ruby check.rb
+  - type: serial
+    name: 3.redis-postgres
+    steps:
+    - service: demo2
+      command: bundle exec ruby check.rb
+  - type: parallel
+    name: 4.parallelised
+    steps:
+    - service: demobusy
+      command: sleep 2
+    - type: serial
+      steps:
+      - service: demobusy
+        command: echo Before
+      - type: parallel
+        steps:
+          - service: demobusy
+            command: echo In Between
+          - service: demobusy
+            command: sleep 3
+      - service: demobusy
+        command: echo After
+  - type: serial
+    name: 14.add_docker
+    steps:
+    - service: adddocker
+      command: docker run busybox echo hello
