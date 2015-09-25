@@ -34,3 +34,30 @@ demo2:
     - postgres
 postgres:
    image: postgres:9.3.6
+compiledemo:
+  build:
+    path: ./8.deployment-container/
+    dockerfile_path: Dockerfile.build
+    image: compiledemo
+  volumes:
+    - ./8.deployment-container/tmp:/data
+deploy:
+  build:
+    path: ./8.deployment-container/
+    dockerfile_path: Dockerfile
+    image: deploydemo
+  volumes_from:
+    - compiledemo
+builder:
+  build:
+    path: ./8.deployment-container/
+    dockerfile_path: Dockerfile.builder
+  add_docker: true
+  volumes_from:
+    - compiledemo
+app1:
+  image: testimage1
+app2:
+  build:
+    path: ./8.deployment-container/
+    dockerfile_path: Dockerfile.app2

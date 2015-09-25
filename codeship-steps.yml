@@ -37,6 +37,18 @@
       - service: demobusy
         command: echo After
   - type: serial
+    name: 8.deployment-container
+    steps:
+    - service: compiledemo
+      name: create_artifact
+      command: "./write_artifact.sh"
+    - service: deploy
+      name: use_artifact
+      command: cat /data/date
+    - service: app
+      name: build_with_artifact
+      command: cat /app/date
+  - type: serial
     name: 14.add_docker
     steps:
     - service: adddocker
