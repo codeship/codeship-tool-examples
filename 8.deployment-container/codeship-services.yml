@@ -1,9 +1,13 @@
 compiledemo:
-  image: ubuntu
+  build: ./
+  dockerfile: Dockerfile.build
+  volumes:
+    - ./tmp:/data
 deploy:
-  build:
-    image: busybox_deployment_container
-    dockerfile_path: Dockerfile
-    configure:
-      service: compiledemo
-      command: bash write_artifact.sh
+  build: ./
+  dockerfile: Dockerfile
+  volumes_from:
+    - compiledemo
+app:
+  build: ./
+  dockerfile: Dockerfile.app
