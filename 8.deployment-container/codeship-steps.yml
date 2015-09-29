@@ -4,6 +4,12 @@
 - service: deploy
   name: use_artifact
   command: cat /data/date
-- service: app
-  name: build_with_artifact
+- service: builder
+  name: build_image
+  command: docker build -t testimage1 -f Dockerfile.app1 ./
+- service: app1
+  name: build_with_artifact_via_container
+  command: cat /app/date
+- service: app2
+  name: build_with_artifact_local
   command: cat /app/date
