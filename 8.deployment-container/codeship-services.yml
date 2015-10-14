@@ -8,6 +8,15 @@ deploy:
   dockerfile: Dockerfile
   volumes_from:
     - compiledemo
-app:
+builder:
   build: ./
-  dockerfile: Dockerfile.app
+  dockerfile: Dockerfile.builder
+  add_docker: true
+  volumes_from:
+    - compiledemo
+app1:
+  image: testimage1
+  dockerfile: Dockerfile.app1
+app2:
+  build: ./
+  dockerfile: Dockerfile.app2
