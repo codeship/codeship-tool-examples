@@ -1,0 +1,2 @@
+- service: examples
+  command: ./run_tests.sh
