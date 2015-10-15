@@ -1,3 +1,3 @@
 adddocker:
-  image: jpetazzo/dind
+  build: ./
   add_docker: true
