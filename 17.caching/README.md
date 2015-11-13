@@ -6,9 +6,9 @@ To try this out start the registry, and then time different jet runs:
 
 ```
 $ ./before.sh
-$ time jet steps --push --branch=test  # ~2mins
-$ time jet steps --push --branch=test  # ~20s due to caching plus no new images to push
-$ time jet steps --push --branch=test  # ~20s
+$ time jet steps --push --ci-branch=test  # ~2mins
+$ time jet steps --push --ci-branch=test  # ~20s due to caching plus no new images to push
+$ time jet steps --push --ci-branch=test  # ~20s
 $ ./after.sh
 ```
 
