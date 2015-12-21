@@ -1,0 +1,13 @@
+demo:
+  build:
+    image: localhost:5000/myapp
+    dockerfile_path: Dockerfile
+registry:
+  image: registry
+  ports:
+    - "5000:5000"
+dockercfg_generator:
+  build: 
+    image: dockercfg_generator
+    dockerfile_path: Dockerfile.generator
+
