@@ -1,0 +1,199 @@
+- type: serial
+  name: 01
+  steps:
+  - service: 01demodockerfile
+    command: ruby --version
+  - service: 01demohub
+    command: ruby --version
+  - service: 01demodockerfiledockercompose
+    command: ls /app
+- type: serial
+  name: 02
+  steps:
+    - service: 02demo
+      command: bundle exec ruby check.rb
+- type: serial
+  name: 03
+  steps:
+  - name: 03ruby
+    service: 03demo
+    command: bundle exec ruby check.rb
+- type: parallel
+  name: 04
+  steps:
+  - service: 04demo
+    command: sleep 2
+  - type: serial
+    steps:
+    - service: 04demo
+      command: echo Before
+    - type: parallel
+      steps:
+        - service: 04demo
+          command: echo In Between
+        - service: 04demo
+          command: sleep 3
+    - service: 04demo
+      command: echo After
+- type: matrix
+  name: 05
+  services:
+    - 05demo1
+    - 05demo2
+  steps:
+    - command: env
+- type: matrix
+  name: 06
+  services:
+    - 05demo1
+    - 05demo2
+  steps:
+    - type: parallel
+      steps:
+      - command: sleep 4
+      - command: sleep 2
+      - type: serial
+        steps:
+        - command: sleep 3
+        - command: env
+- type: serial
+  name: 07
+  steps:
+    - service: 07write
+      command: bash write_artifact.sh
+    - service: 07read
+      command: cat /artifacts/foo
+- type: serial
+  name: 08
+  steps:
+  - service: 08compiledemo
+    name: create_artifact
+    command: "./write_artifact.sh"
+  - service: 08deploy
+    name: use_artifact
+    command: cat /data/date
+  - service: 08builder
+    name: build_image
+    command: docker build -t 08testimage1 -f Dockerfile.app1 ./
+  - service: 08app1
+    name: build_with_artifact_via_container
+    command: cat /app/date
+  - service: 08app2
+    name: build_with_artifact_local
+    command: cat /app/date
+- service: busybox
+  name: 09
+  tag: master
+  command: echo "SHOULD ONLY RUN ON MASTER"
+- type: parallel
+  name: 10
+  steps:
+  - service: busybox
+    command: echo 1
+  - service: busybox
+    command: echo 2
+  - service: busybox
+    command: echo 3
+  - service: busybox
+    command: echo 4
+  - service: busybox
+    command: echo 5
+  - service: busybox
+    command: echo 6
+  - service: busybox
+    command: echo 7
+  - service: busybox
+    command: echo 8
+  - service: busybox
+    command: echo 9
+  - service: busybox
+    command: echo 10
+  - service: busybox
+    command: echo 11
+  - service: busybox
+    command: echo 12
+  - service: busybox
+    command: echo 13
+  - service: busybox
+    command: echo 14
+  - service: busybox
+    command: echo 15
+  - service: busybox
+    command: echo 16
+  - service: busybox
+    command: echo 17
+  - service: busybox
+    command: echo 18
+  - service: busybox
+    command: echo 19
+  - service: busybox
+    command: echo 20
+  - service: busybox
+    command: echo 21
+  - service: busybox
+    command: echo 22
+  - service: busybox
+    command: echo 23
+  - service: busybox
+    command: echo 24
+  - service: busybox
+    command: echo 25
+- service: 11busybox
+  name: 11
+  command: ./check_for_foo.sh
+- service: adddocker
+  name: 14
+  command: docker run busybox echo hello
+- type: serial
+  name: 15
+  steps:
+  - type: parallel
+    service: 15app
+    steps:
+      - command: bash /app/compute.sh /app/files/1 /data
+      - command: bash /app/compute.sh /app/files/2 /data
+      - command: bash /app/compute.sh /app/files/3 /data
+      - command: bash /app/compute.sh /app/files/4 /data
+      - command: bash /app/compute.sh /app/files/5 /data
+      - command: bash /app/compute.sh /app/files/6 /data
+      - command: bash /app/compute.sh /app/files/7 /data
+      - command: bash /app/compute.sh /app/files/8 /data
+      - command: bash /app/compute.sh /app/files/9 /data
+      - command: bash /app/compute.sh /app/files/10 /data
+      - command: bash /app/compute.sh /app/files/11 /data
+      - command: bash /app/compute.sh /app/files/12 /data
+      - command: bash /app/compute.sh /app/files/13 /data
+      - command: bash /app/compute.sh /app/files/14 /data
+      - command: bash /app/compute.sh /app/files/15 /data
+      - command: bash /app/compute.sh /app/files/16 /data
+      - command: bash /app/compute.sh /app/files/17 /data
+      - command: bash /app/compute.sh /app/files/18 /data
+      - command: bash /app/compute.sh /app/files/19 /data
+      - command: bash /app/compute.sh /app/files/20 /data
+  - service: 15app
+    command: bash /app/print.sh /data
+- type: push
+  name: 16
+  service: 16demo
+  image_name: quay.io/codeship/codeship-tool-examples
+  registry: quay.io
+  image_tag: push_demo
+  encrypted_dockercfg_path: dockercfg.encrypted
+- service: 17demo
+  name: 17
+  command: ls -l
+- name: 18
+  service: 18test
+  command: ab -n 100 -c 15 http://lb/
+- name: 19
+  service: 19demo
+  type: push
+  name: docker_push
+  image_name: quay.io/codeship/codeship-tool-examples
+  image_tag: dockercfg_service_test
+  registry: quay.io
+  dockercfg_service: 19dockercfg_generator
+
+
+
+
