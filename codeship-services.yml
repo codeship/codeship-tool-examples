@@ -126,6 +126,6 @@ postgres:
 busybox:
   image: busybox
 adddocker:
-  image: docker:dind
+  image: docker:1.9-dind
   add_docker: true
 
