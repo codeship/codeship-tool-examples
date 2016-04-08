@@ -74,7 +74,7 @@
     command: cat /data/date
   - service: 08builder
     name: build_image
-    command: docker build -t 08testimage1 -f Dockerfile.app1 ./
+    command: "./build_with_docker.sh"
   - service: 08app1
     name: build_with_artifact_via_container
     command: cat /app/date
@@ -188,7 +188,7 @@
 - name: 19
   service: 19demo
   type: push
-  name: docker_push
+  name: 20
   image_name: quay.io/codeship/codeship-tool-examples
   image_tag: dockercfg_service_test
   registry: quay.io

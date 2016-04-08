@@ -6,7 +6,7 @@
   command: cat /data/date
 - service: builder
   name: build_image
-  command: docker build -t testimage1 -f Dockerfile.app1 ./
+  command: "./build_with_docker.sh"
 - service: app1
   name: build_with_artifact_via_container
   command: cat /app/date

@@ -50,7 +50,7 @@
   build: ./08.deployment-container
   dockerfile: Dockerfile.build
   volumes:
-    - ./tmp/08/:/data
+    - ./08.deployment-container/tmp/:/data
 08deploy:
   build: ./08.deployment-container
   dockerfile: Dockerfile
