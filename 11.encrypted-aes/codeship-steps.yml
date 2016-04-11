@@ -1,2 +1,2 @@
-- service: busybox
-  command: env
+- service: checker
+  command: ./check_for_foo.sh

@@ -3,7 +3,7 @@
 all: test
 
 test:
-	@ for dir in $(shell find . -depth -maxdepth 1 -type d | grep -v .git | grep -v ^11 | grep -v ^12 | grep ^./$ ); do \
+	@ for dir in $(shell find . -depth -type d | grep -v .git | grep "^./\w*\.[0-9a-zA-Z_-]*$$"); do \
 		echo $$dir; \
 		set -e; \
 	 	if [ -f $$dir/before.sh ]; then \
