@@ -69,6 +69,7 @@ members of the project's leadership.
 
 * Laura Frank (Codeship Inc.) <<laura@codeship.com>>
 * Marko Locher (Codeship Inc.) <<marko@codeship.com>>
+* Brendan Fosberry (Codeship Inc.) <<brendan@codeship.com>>
 
 ## Attribution
 
