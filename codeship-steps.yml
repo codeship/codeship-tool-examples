@@ -188,7 +188,6 @@
 - name: 19
   service: 19demo
   type: push
-  name: 20
   image_name: quay.io/codeship/codeship-tool-examples
   image_tag: dockercfg_service_test
   registry: quay.io
