@@ -1,12 +1,7 @@
 # Codeship Tool Examples 
 
-Examples for use with the Codeship tool.
+These examples illustrate various features using Codeship's Docker Platform, Jet. Within a directory, either follow the README instructions, or simply type `jet steps` to run the steps with Jet.
 
-#### Repositories that use the Codeship tool
+* [Installation Instructions](https://codeship.com/documentation/docker/installation/)
+* [More information about Codeship's Docker Platform](https://codeship.com/docker)
 
-* peter-edge/smartystreets_ruby (https://github.com/peter-edge/smartystreets_ruby)
-* peter-edge/go-scm (https://github.com/peter-edge/go-scm)
-
-#### Questions? Comments?
-
-contact@codeship.com
