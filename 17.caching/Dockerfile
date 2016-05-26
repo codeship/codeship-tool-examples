@@ -1,5 +1,5 @@
 # base on latest ubuntu base image
-FROM ubuntu
+FROM busybox
 
 # do something that takes a long time
 RUN sleep 10s
