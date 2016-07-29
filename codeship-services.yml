@@ -85,7 +85,6 @@
     path: 16.docker_push
 17demo:
   build:
-    image: quay.io/codeship/codeship-tool-examples
     dockerfile_path: Dockerfile
     path: 17.caching
   cached: true
