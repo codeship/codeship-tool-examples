@@ -179,9 +179,6 @@
   registry: quay.io
   image_tag: push_demo
   encrypted_dockercfg_path: dockercfg.encrypted
-- service: 17demo
-  name: 17
-  command: ls -l
 - name: 18
   service: 18test
   command: ab -n 100 -c 15 http://lb/
@@ -192,7 +189,4 @@
   image_tag: dockercfg_service_test
   registry: quay.io
   dockercfg_service: 19dockercfg_generator
-
-
-
 

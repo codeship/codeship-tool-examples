@@ -1,15 +1,6 @@
 ## 17.caching
 
-With this caching example, before a build is attempted a cache image is pulled from the registry. If this image is present it contributes to the docker image cache.
+[deprecated]
 
-To try this out start the registry, and then time different jet runs:
-
-```
-$ ./before.sh
-$ time jet steps --push --ci-branch=test  # ~2mins
-$ time jet steps --push --ci-branch=test  # ~20s due to caching plus no new images to push
-$ time jet steps --push --ci-branch=test  # ~20s
-$ ./after.sh
-```
-
-You can switch off the `cached` flag in the codeship-services file to see what difference it makes.
+This caching example has been deprecated because local builds running with the Jet CLI rely only on the local Docker registry.
+To learn more about how caching works, and how to use caching in your hosted builds, check out the [caching tutorial](http://codeship.com/documentation/docker/caching/).
