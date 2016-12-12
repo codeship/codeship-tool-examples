@@ -113,6 +113,12 @@
     dockerfile_path: Dockerfile.generator
     path: 19.dockercfg-service
   encrypted_env_file: dockercfg.env.encrypted
+20buildargs:
+  build:
+    dockerfile: Dockerfile
+    path: 20.build-args
+    args:
+      FOO: bar
 redis:
   image: redis:2.8.19
 postgres:
