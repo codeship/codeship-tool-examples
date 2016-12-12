@@ -1,0 +1,3 @@
+- service: app
+  command:  /app/test-build-arg.sh
+

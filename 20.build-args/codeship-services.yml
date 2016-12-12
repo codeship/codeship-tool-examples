@@ -1,0 +1,6 @@
+app:
+  build:
+    dockerfile: Dockerfile
+    args:  
+      FOO: "bar"
+
