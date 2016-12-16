@@ -3,4 +3,6 @@ app:
     dockerfile: Dockerfile
     args:  
       FOO: "bar"
-
+    encrypted_args:
+      - j3O85UCAm7WWKhK04ilkVtNH/afK1nnOVQ3qdcTmAKltP/4a+w==
+    encrypted_args_file: build_args.encrypted
