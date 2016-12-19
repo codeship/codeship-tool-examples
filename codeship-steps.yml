@@ -189,4 +189,7 @@
   image_tag: dockercfg_service_test
   registry: quay.io
   dockercfg_service: 19dockercfg_generator
+- name: 20
+  service: 20buildargs
+  command: /app/test-build-arg.sh
 
