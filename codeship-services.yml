@@ -115,10 +115,12 @@
   encrypted_env_file: dockercfg.env.encrypted
 20buildargs:
   build:
-    dockerfile: Dockerfile
     path: 20.build-args
-    args:
-      FOO: bar
+    dockerfile: Dockerfile
+    args:  
+      UNENCRYPTED: "my-unencrypted-build-arg"
+    encrypted_args_file: 20.build-args/build_args.encrypted
+    encrypted_args: n3gGLaQfbmNKz8ZVez+HS9/82LZBVP/+Sea2sD91cpdY69G2LF+CE54gOSOaGH7E8g==
 redis:
   image: redis:2.8.19
 postgres:

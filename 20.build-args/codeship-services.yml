@@ -2,7 +2,6 @@ app:
   build:
     dockerfile: Dockerfile
     args:  
-      FOO: "bar"
-    encrypted_args:
-      - j3O85UCAm7WWKhK04ilkVtNH/afK1nnOVQ3qdcTmAKltP/4a+w==
+      UNENCRYPTED: "foo"
+    encrypted_args: n3gGLaQfbmNKz8ZVez+HS9/82LZBVP/+Sea2sD91cpdY69G2LF+CE54gOSOaGH7E8g==
     encrypted_args_file: build_args.encrypted
