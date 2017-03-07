@@ -6,6 +6,6 @@ demo:
     - redis
     - postgres
 redis:
-  image: redis:2.6.17
+  image: redis:3.2.8
 postgres:
    image: postgres:9.3.6

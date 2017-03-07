@@ -1,8 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    pg (0.18.1)
-    redis (3.2.1)
+    pg (0.19.0)
+    redis (3.3.3)
+    retriable (3.0.1)
 
 PLATFORMS
   ruby
@@ -10,3 +11,10 @@ PLATFORMS
 DEPENDENCIES
   pg
   redis
+  retriable
+
+RUBY VERSION
+   ruby 2.4.0p0
+
+BUNDLED WITH
+   1.14.4
