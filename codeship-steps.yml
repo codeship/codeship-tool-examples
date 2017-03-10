@@ -181,7 +181,7 @@
   encrypted_dockercfg_path: dockercfg.encrypted
 - name: 18
   service: 18test
-  command: ab -n 100 -c 15 http://lb/
+  command: ./ab-with-backoff.sh
 - name: 19
   service: 19demo
   type: push

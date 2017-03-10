@@ -122,7 +122,7 @@
     encrypted_args_file: 20.build-args/build_args.encrypted
     encrypted_args: n3gGLaQfbmNKz8ZVez+HS9/82LZBVP/+Sea2sD91cpdY69G2LF+CE54gOSOaGH7E8g==
 redis:
-  image: redis:2.8.19
+  image: redis:3.2.8
 postgres:
    image: postgres:9.3.6
 busybox:

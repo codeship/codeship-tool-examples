@@ -1,10 +1,18 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    redis (3.2.1)
+    redis (3.3.3)
+    retriable (3.0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   redis
+  retriable
+
+RUBY VERSION
+   ruby 2.4.0p0
+
+BUNDLED WITH
+   1.14.4
