@@ -45,7 +45,7 @@
 07data:
   image: busybox
   volumes:
-    - ./tmp/07/:/artifacts
+    - ./07.volumes/tmp/:/artifacts
 08compiledemo:
   build: ./08.deployment-container
   dockerfile: Dockerfile.build
