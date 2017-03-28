@@ -8,7 +8,7 @@ def exit_if_not expected, current
 end
 
 Retriable.configure do |c|
-	c.tries=5
+	c.tries=10
 end
 
 puts "Redis"
