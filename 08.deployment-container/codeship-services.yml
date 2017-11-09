@@ -15,7 +15,6 @@ builder:
   volumes_from:
     - compiledemo
 app1:
-  image: 08testimage1
   dockerfile: Dockerfile.app1
 app2:
   build: ./
