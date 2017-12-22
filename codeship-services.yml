@@ -130,4 +130,8 @@ busybox:
 adddocker:
   image: docker:1.9-dind
   add_docker: true
-
+22workingdir:
+  build:
+    path: 22.working_dir
+    dockerfile: Dockerfile
+  working_dir: /home
