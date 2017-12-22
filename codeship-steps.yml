@@ -192,6 +192,9 @@
 - name: 20
   service: 20buildargs
   command: /app/test-build-arg.sh
+- name: 21
+  service: 21entrypoint
+  command: "-o pid"
 - name: 22
   service: 22workingdir
   command: ./script.sh
