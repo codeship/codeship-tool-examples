@@ -124,6 +124,11 @@
 21entrypoint:
   image: busybox
   entrypoint: "ps"
+22workingdir:
+  build:
+    path: 22.working_dir
+    dockerfile: Dockerfile
+  working_dir: /home
 redis:
   image: redis:3.2.8
 postgres:
