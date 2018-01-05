@@ -1,0 +1,2 @@
+- service: app
+  command: "-c 3 foo"

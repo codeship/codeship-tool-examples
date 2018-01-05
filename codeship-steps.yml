@@ -198,3 +198,6 @@
 - name: 22
   service: 22workingdir
   command: ./script.sh
+- name: 23
+  service: 23hostname
+  command: "-c 3 foo"

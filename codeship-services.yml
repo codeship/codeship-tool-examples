@@ -129,6 +129,10 @@
     path: 22.working_dir
     dockerfile: Dockerfile
   working_dir: /home
+23hostname:
+  build:
+    path: 23.hostname
+    dockerfile: Dockerfile
 redis:
   image: redis:3.2.8
 postgres:
