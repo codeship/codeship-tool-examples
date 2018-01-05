@@ -133,6 +133,7 @@
   build:
     path: 23.hostname
     dockerfile: Dockerfile
+  hostname: foo
 redis:
   image: redis:3.2.8
 postgres:
