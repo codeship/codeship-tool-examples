@@ -1,0 +1,7 @@
+server:
+  image: python
+  command: python3 -m http.server
+app:
+  build: .
+  depends_on:
+    - server

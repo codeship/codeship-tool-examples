@@ -109,7 +109,7 @@
     dockerfile_path: Dockerfile
     path: 19.dockercfg-service
 19dockercfg_generator:
-  build: 
+  build:
     dockerfile_path: Dockerfile.generator
     path: 19.dockercfg-service
   encrypted_env_file: dockercfg.env.encrypted
@@ -117,7 +117,7 @@
   build:
     path: 20.build-args
     dockerfile: Dockerfile
-    args:  
+    args:
       UNENCRYPTED: "my-unencrypted-build-arg"
     encrypted_args_file: 20.build-args/build_args.encrypted
     encrypted_args: n3gGLaQfbmNKz8ZVez+HS9/82LZBVP/+Sea2sD91cpdY69G2LF+CE54gOSOaGH7E8g==
@@ -129,6 +129,12 @@
     path: 22.working_dir
     dockerfile: Dockerfile
   working_dir: /home
+23dependson:
+  build:
+    path: 23.depends_on
+    dockerfile: Dockerfile
+  depends_on:
+    - server
 redis:
   image: redis:3.2.8
 postgres:
@@ -138,3 +144,6 @@ busybox:
 adddocker:
   image: docker:1.9-dind
   add_docker: true
+server:
+  image: python
+  command: python3 -m http.server
