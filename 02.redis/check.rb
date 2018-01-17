@@ -1,4 +1,4 @@
-require "redis"
+require 'redis'
 require 'retriable'
 
 def exit_if_not expected, current
@@ -8,14 +8,14 @@ def exit_if_not expected, current
 end
 
 Retriable.configure do |c|
-	c.tries=10
+  c.tries = 10
 end
 
-puts "Redis"
+puts 'Redis'
 
 Retriable.retriable on: [ Errno::ECONNREFUSED, Redis::CannotConnectError ] do
-	puts "retry"
-	@redis = Redis.new(host: "redis")
-	@redis.set "foo", "bar"
+  puts 'retry'
+  @redis = Redis.new(host: 'redis')
+  @redis.set 'foo', 'bar'
 end
-exit_if_not @redis.get("foo"), "bar"
+exit_if_not @redis.get('foo'), 'bar'

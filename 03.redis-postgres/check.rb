@@ -1,28 +1,22 @@
-require "redis"
-require "pg"
-require "retriable"
+require 'redis'
+require 'pg'
+require 'retriable'
 
 Retriable.configure do |c|
-	c.tries=10
+  c.tries = 10
 end
 
-def exit_if_not expected, current
-  puts "Expected: #{expected}"
-  puts "Current: #{current}"
-  exit(1) if expected != current
+Retriable.retriable on: [Errno::ECONNREFUSED, Redis::CannotConnectError] do
+  puts 'Redis'
+  redis = Redis.new(host: 'redis')
+  puts "REDIS VERSION: #{redis.info['redis_version']}"
 end
 
-Retriable.retriable on: [ Errno::ECONNREFUSED, Redis::CannotConnectError ] do
-	puts "Redis"
-	redis = Redis.new(host: "redis")
-	puts "REDIS VERSION: #{redis.info["redis_version"]}"
+postgres_username = 'postgres'
+postgres_password = ''
+Retriable.retriable on: [PG::ConnectionBad] do
+  puts 'retrying postgres connection'
+  @test = PG.connect('postgres', 5432, '', '', 'postgres', postgres_username, postgres_password)
 end
 
-
-postgres_username = "postgres"
-postgres_password = ""
-Retriable.retriable on: [ PG::ConnectionBad ] do
-	puts "retrying postgres connection"
-	@test = PG.connect("postgres", 5432, "", "", "postgres", postgres_username, postgres_password)
-end
-puts @test.exec("SELECT version();").first["version"]
+puts @test.exec('SELECT version();').first['version']

@@ -1,3 +1,3 @@
 FROM busybox
 
-ADD ./script.sh /home
+COPY ./script.sh /home

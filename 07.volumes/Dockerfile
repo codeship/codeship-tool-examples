@@ -1,4 +1,4 @@
 FROM ubuntu
 
-ADD . /app
+COPY . /app
 WORKDIR /app

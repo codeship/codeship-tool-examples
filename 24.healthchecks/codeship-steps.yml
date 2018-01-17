@@ -1,0 +1,4 @@
+- service: app
+  name: elasticsearch
+  command: curl -XGET elasticsearch:9200
+  # no need for script to check if elasticsearch service is up because of healthchecks

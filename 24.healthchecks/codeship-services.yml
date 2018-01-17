@@ -1,0 +1,6 @@
+elasticsearch:
+   image: healthcheck/elasticsearch
+app:
+  build: .
+  depends_on:
+    - elasticsearch
