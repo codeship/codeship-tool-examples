@@ -143,7 +143,7 @@
     - 24elasticsearch
 24elasticsearch:
   build:
-    path: 24.healtchecks
+    path: 24.healthchecks
     dockerfile: Dockerfile.elasticsearch
 redis:
   image: redis:3.2.8
