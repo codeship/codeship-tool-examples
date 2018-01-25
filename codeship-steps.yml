@@ -203,4 +203,4 @@
   command: ./wait.sh
 - name: 24
   service: 24healthchecks
-  command: curl -XGET elasticsearch:9200
+  command: curl -sL 24elasticsearch:9200
