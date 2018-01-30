@@ -1,0 +1,4 @@
+- service: app
+  name: elasticsearch
+  command: curl -sL elasticsearch:9200  # no need for custom script to check if elasticsearch service is up
+

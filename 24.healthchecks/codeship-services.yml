@@ -1,0 +1,8 @@
+elasticsearch:
+  build:
+    dockerfile: Dockerfile.elasticsearch
+
+app:
+  build: .
+  depends_on:
+    - elasticsearch

@@ -1,2 +1,2 @@
 - service: app
-  command: /wait.sh
+  command: ./wait.sh

@@ -201,3 +201,6 @@
 - name: 23
   service: 23dependson
   command: ./wait.sh
+- name: 24
+  service: 24healthchecks
+  command: curl -sL 24elasticsearch:9200

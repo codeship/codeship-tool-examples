@@ -10,8 +10,8 @@ RUN mkdir /app
 WORKDIR /app
 
 # copy over Gemfile and install bundle
-ADD Gemfile /app/Gemfile
-ADD Gemfile.lock /app/Gemfile.lock
+COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install --jobs 20 --retry 5
 
-Add . /app
+COPY . /app
