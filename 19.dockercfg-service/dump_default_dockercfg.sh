@@ -6,10 +6,9 @@ cat << EOF > "$1"
 {
   "auths": {
   	"$REGISTRY": {
-  		"auth": "$AUTH",
+		"auth": "dXNlcjpwYXNzCg==",
   		"email": ""
   	}
   }
 }
 EOF
-
