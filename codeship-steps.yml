@@ -204,3 +204,6 @@
 - name: 24
   service: 24healthchecks
   command: curl -sL 24elasticsearch:9200
+- name: 25
+  service: 25envbuildargs
+  command: echo 25
