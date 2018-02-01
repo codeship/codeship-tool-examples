@@ -150,7 +150,8 @@
     path: 25.env_build_args
     dockerfile: Dockerfile
     args:
-        CI_STRING_TIME: "foo" # will get replaced with the actual value at image build time
+        CI_STRING_TIME: "{{.StringTime}}"
+        CI: "{{.CI}}"
 
 redis:
   image: redis:3.2.8
