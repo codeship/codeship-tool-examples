@@ -1,0 +1,6 @@
+app:
+  build:
+    dockerfile: Dockerfile
+    args:
+        CI_STRING_TIME: "{{.StringTime}}"
+        CI: "{{.CI}}"

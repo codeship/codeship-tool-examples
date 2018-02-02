@@ -1,0 +1,3 @@
+- service: app
+  name: app
+  command: echo "hello world"

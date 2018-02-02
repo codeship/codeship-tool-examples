@@ -145,6 +145,14 @@
   build:
     path: 24.healthchecks
     dockerfile: Dockerfile.elasticsearch
+25envbuildargs:
+  build:
+    path: 25.env_build_args
+    dockerfile: Dockerfile
+    args:
+        CI_STRING_TIME: "{{.StringTime}}"
+        CI: "{{.CI}}"
+
 redis:
   image: redis:3.2.8
 postgres:
