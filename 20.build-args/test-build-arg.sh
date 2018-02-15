@@ -7,11 +7,11 @@ else
   echo "UNENCRYPTED has been set to $UNENCRYPTED"
 fi
 
-if [[ $CI_TIMESTAMP == "default" ]] ; then
-  echo "Environment build args are not working. CI_TIMESTAMP should not be default."
+if [[ $CI == "default" ]] ; then
+  echo "Environment build args are not working. CI should not be default."
   exit 1
 else
-  echo "CI_TIMESTAMP has been set to $CI_TIMESTAMP"
+  echo "CI has been set to $CI"
 fi
 
 if [[ $ENCRYPTED == "default" ]] ; then
