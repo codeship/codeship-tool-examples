@@ -4,5 +4,5 @@ app:
     args:
       UNENCRYPTED: "foo"
       CI: "{{.Ci}}"
-    encrypted_args: FSYfFwDhxFrci7gYn76MHDArokuhWb4b2E6jfPHnrVRBLtbGDYkUvPophdptL6AnFQ==
+    encrypted_args: LXpZ6o5BvOBe9v9jBoHxmzvifYXPrEWY7fiHj9jDrd00VWeR1ZrWIXM4dILSA3dAIw==
     encrypted_args_file: build_args.encrypted
