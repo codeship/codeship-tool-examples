@@ -120,7 +120,7 @@
     args:
       UNENCRYPTED: "my-unencrypted-build-arg"
     encrypted_args_file: 20.build-args/build_args.encrypted
-    encrypted_args: n3gGLaQfbmNKz8ZVez+HS9/82LZBVP/+Sea2sD91cpdY69G2LF+CE54gOSOaGH7E8g==
+    encrypted_args: LXpZ6o5BvOBe9v9jBoHxmzvifYXPrEWY7fiHj9jDrd00VWeR1ZrWIXM4dILSA3dAIw==
 21entrypoint:
   image: busybox
   entrypoint: "ps"
