@@ -1,0 +1,8 @@
+demo:
+  build:
+    image: myapp
+    dockerfile_path: Dockerfile
+  links:
+    - redis
+redis:
+  image: redis:3.2.8
