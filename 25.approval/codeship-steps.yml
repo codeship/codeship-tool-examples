@@ -1,5 +1,6 @@
 - service: demo
   command: bundle exec ruby check.rb
+
 - name: Manual Approval
   type: manual
   tag: approval
