@@ -1,4 +1,4 @@
-FROM elasticsearch
+FROM elasticsearch:6.4.1
 
 COPY elasticsearch-healthcheck /usr/local/bin/
 
